@@ -27,7 +27,7 @@ const connect = async () => {
 console.log("hello");
 
 app.use(
-  cors({ origin: "https://fiverrwebsite.netlify.app/", credentials: true })
+  cors({ origin: "https://fiverrwebsite.netlify.app", credentials: true })
 );
 app.use(express.json());
 app.use(cookieParser());
