@@ -31,7 +31,11 @@ app.use(
 );
 app.options(
   "*",
-  cors({ origin: "https://fiverrwebsite.netlify.app", credentials: true })
+  cors({
+    origin: "https://fiverrwebsite.netlify.app",
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+    credentials: true,
+  })
 );
 
 app.use(express.json());

@@ -50,7 +50,6 @@ export const login = async (req, res, next) => {
       })
       .status(200)
       .send(info);
-    console.log("helloxxxxxx");
   } catch (err) {
     next(err);
   }
