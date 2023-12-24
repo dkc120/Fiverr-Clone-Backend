@@ -44,7 +44,7 @@ app.use("/api/conversations", conversationRoute);
 app.use("/api/messages", messageRoute);
 app.use("/api/reviews", reviewRoute);
 app.get("/", (req, res) => {
-  res.send("you are in home", cors);
+  res.send({"you are in home", cors});
 });
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
