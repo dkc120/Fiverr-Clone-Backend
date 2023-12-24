@@ -32,7 +32,7 @@ app.use(
     allowedHeaders: ["Content-Type", "X-Auth-Token", "Origin", "Authorization"],
   })
 );
-console.log(cors, "hellow cors");
+
 app.use(express.json());
 app.use(cookieParser());
 
@@ -44,6 +44,7 @@ app.use("/api/conversations", conversationRoute);
 app.use("/api/messages", messageRoute);
 app.use("/api/reviews", reviewRoute);
 app.get("/", (req, res) => {
+  console.log(cors, "hellow cors");
   res.send("you are in home");
 });
 app.use((err, req, res, next) => {
