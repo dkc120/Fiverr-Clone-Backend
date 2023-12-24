@@ -26,9 +26,9 @@ const connect = async () => {
 };
 console.log("hello");
 
-app.use(
-  cors({ origin: "https://fiverrwebsite.netlify.app", credentials: true })
-);
+// app.use(
+//   cors({ origin: "https://fiverrwebsite.netlify.app", credentials: true })
+// );
 app.options(
   "*",
   cors({
