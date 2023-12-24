@@ -40,6 +40,10 @@ export const login = async (req, res, next) => {
     );
 
     const { password, ...info } = user._doc;
+    res.header(
+      "Access-Control-Allow-Origin",
+      "https://fiverrwebsite.netlify.app"
+    );
     res
       .cookie("accessToken", token, {
         httpOnly: true,
