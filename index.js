@@ -24,17 +24,12 @@ const connect = async () => {
     console.log(error);
   }
 };
-console.log("hello");
 
-// app.use(
-//   cors({ origin: "https://fiverrwebsite.netlify.app", credentials: true })
-// );
-app.options(
-  "*",
+app.use(
   cors({
     origin: "https://fiverrwebsite.netlify.app",
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "X-Auth-Token", "Origin", "Authorization"],
   })
 );
 
