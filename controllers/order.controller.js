@@ -70,7 +70,7 @@ export const confirm = async (req, res, next) => {
       { payment_intent: session_id },
       { $set: { isCompleted: true } }
     );
-    console.log(order);
+
     res.status(200).send("order has been confiremed");
   } catch (err) {
     console.log(err);
