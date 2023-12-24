@@ -32,7 +32,7 @@ app.use(
     allowedHeaders: ["Content-Type", "X-Auth-Token", "Origin", "Authorization"],
   })
 );
-
+console.log(cors, "hellow cors");
 app.use(express.json());
 app.use(cookieParser());
 
