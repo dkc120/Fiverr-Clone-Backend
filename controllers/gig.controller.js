@@ -46,17 +46,6 @@ export const getGig = async (req, res, next) => {
 export const getGigs = async (req, res, next) => {
   const q = req.query;
   console.log(q);
-  // const filters = {
-  //   ...(q.userId && { userId: q.userId }),
-  //   ...(q.cat && { cat: q.cat }),
-  //   ...((q.min || q.max) && {
-  //     price: {
-  //       ...(q.min && { $gt: q.min }),
-  //       ...(q.max && { $lt: q.max }),
-  //     },
-  //   }),
-  //   ...(q.search && { title: { $regex: q.search, $options: "i" } }),
-  // };
 
   const filters = {
     ...(q.userId && { userId: q.userId }),
