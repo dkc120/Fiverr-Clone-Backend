@@ -39,7 +39,7 @@ app.use("/api/orders", orderRoute);
 app.use("/api/conversations", conversationRoute);
 app.use("/api/messages", messageRoute);
 app.use("/api/reviews", reviewRoute);
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("you are in home");
 });
 app.use((err, req, res, next) => {
