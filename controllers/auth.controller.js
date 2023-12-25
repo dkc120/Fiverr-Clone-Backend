@@ -23,13 +23,12 @@ export const register = async (req, res, next) => {
 export const login = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: req.body.username });
-    console.log("hello1212");
+
     if (!user) return next(createError(404, "User not found!"));
 
     const isCorrect = bcrypt.compareSync(req.body.password, user.password);
     if (!isCorrect)
       return next(createError(400, "Wrong password or username!"));
-    console.log("1");
 
     const token = jwt.sign(
       {
@@ -40,7 +39,7 @@ export const login = async (req, res, next) => {
     );
 
     const { password, ...info } = user._doc;
-    res.header("Access-Control-Allow-Origin", "*");
+
     res
       .cookie("accessToken", token, {
         httpOnly: true,
