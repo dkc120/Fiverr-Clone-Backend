@@ -27,7 +27,7 @@ const connect = async () => {
 
 app.use(
   cors({
-    origin: "https://fiverrwebsite.netlify.app",
+    origin: ["https://fiverrwebsite.netlify.app", "http://localhost:5173"],
     credentials: true,
     allowedHeaders: ["Content-Type", "X-Auth-Token", "Origin", "Authorization"],
   })
